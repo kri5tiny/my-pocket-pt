@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log Workout | My Pocket PT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Log a Workout</h1>
+<button onclick="window.location.href='index.html'">Back to Home</button>
+
+<div class="form-container">
+  <form id="workout-form">
+    <label for="date">Date:</label>
+    <input type="date" id="date" required />
+
+    <label for="exercise">Exercise:</label>
+    <input type="text" id="exercise" placeholder="e.g. Pull, Push, Legs" required />
+
+    <label for="sets">Sets:</label>
+    <input type="number" id="sets" min="1" required />
+
+    <label for="reps">Reps:</label>
+    <input type="number" id="reps" min="1" required />
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" step="0.5" min="0" required />
+
+    <button type="submit">Save Workout</button>
+  </form>
+</div>
+
+  <script src="log.js"></script>
+</body>
+</html>
