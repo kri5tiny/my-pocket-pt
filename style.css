@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f7f7f7;
+  }
+  
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }  
