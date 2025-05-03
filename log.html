@@ -2,34 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Log Workout | My Pocket PT</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Log a Workout</h1>
-<button onclick="window.location.href='index.html'">Back to Home</button>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Log Workout</h1>
+      <p class="subtitle">Record your workout details</p>
+    </header>
 
-<div class="form-container">
-  <form id="workout-form">
-    <label for="date">Date:</label>
-    <input type="date" id="date" required />
+    <div class="navigation">
+      <button class="nav-button" onclick="window.location.href='dashboard.html'">View Dashboard</button>
+      <button class="nav-button" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
 
-    <label for="exercise">Exercise:</label>
-    <input type="text" id="exercise" placeholder="e.g. Pull, Push, Legs" required />
+    <form id="workoutForm" class="workout-form">
+      <div class="form-group">
+        <label for="workoutDate">Date</label>
+        <input type="date" id="workoutDate" class="form-control" required />
+      </div>
 
-    <label for="sets">Sets:</label>
-    <input type="number" id="sets" min="1" required />
+      <div class="form-group">
+        <label for="workoutType">Workout Type</label>
+        <select id="workoutType" class="form-control" required>
+          <option value="">Select workout type</option>
+          <option value="push">Push Day</option>
+          <option value="pull">Pull Day</option>
+          <option value="legs">Leg Day</option>
+        </select>
+      </div>
 
-    <label for="reps">Reps:</label>
-    <input type="number" id="reps" min="1" required />
+      <div id="exerciseList" class="exercise-list-container">
+        <h3>Exercises</h3>
+        <div class="exercise-list-items">
+          <div class="exercise-item">
+            <div class="exercise-settings">
+              <input type="text" class="exercise-name" placeholder="Exercise name" required />
+              <input type="text" class="exercise-reps" placeholder="reps" required />
+              <input type="text" class="exercise-weight" placeholder="weight + kgs/lbs" required />
+              <input type="text" class="exercise-notes" placeholder="Add notes..." />
+              <button type="button" class="remove-exercise">×</button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="add-exercise">Add Exercise</button>
+      </div>
 
-    <label for="weight">Weight (kg):</label>
-    <input type="number" id="weight" step="0.5" min="0" required />
+      <div class="form-actions">
+        <button type="submit" class="action-button">Save Workout</button>
+      </div>
+    </form>
 
-    <button type="submit">Save Workout</button>
-  </form>
-</div>
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <span class="toast-message">Workout saved</span>
+      </div>
+    </div>
+  </div>
 
   <script src="log.js"></script>
 </body>

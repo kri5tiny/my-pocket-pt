@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Overview | My Pocket PT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Workout Program</h1>
+      <p class="subtitle">Customize your workout plan</p>
+    </header>
+
+    <div class="navigation">
+      <button class="nav-button" onclick="window.location.href='dashboard.html'">View Dashboard</button>
+      <button class="nav-button" id="saveProgram">Save Program</button>
+      <button class="nav-button" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <div class="program-sections">
+      <section class="program-section" id="push">
+        <div class="section-header">
+          <h2>Push Day Exercises</h2>
+        </div>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <input type="text" class="exercise-name" placeholder="Exercise name" />
+            <input type="text" class="exercise-reps" placeholder="reps" />
+            <input type="text" class="exercise-weight" placeholder="weight + kgs/lbs" />
+            <input type="text" class="exercise-notes" placeholder="Add notes..." />
+            <button class="remove-exercise">×</button>
+          </div>
+        </div>
+        <button class="add-exercise">Add Exercise</button>
+      </section>
+
+      <section class="program-section" id="pull">
+        <div class="section-header">
+          <h2>Pull Day Exercises</h2>
+        </div>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <input type="text" class="exercise-name" placeholder="Exercise name" />
+            <input type="text" class="exercise-reps" placeholder="reps" />
+            <input type="text" class="exercise-weight" placeholder="weight + kgs/lbs" />
+            <input type="text" class="exercise-notes" placeholder="Add notes..." />
+            <button class="remove-exercise">×</button>
+          </div>
+        </div>
+        <button class="add-exercise">Add Exercise</button>
+      </section>
+
+      <section class="program-section" id="legs">
+        <div class="section-header">
+          <h2>Leg Day Exercises</h2>
+        </div>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <input type="text" class="exercise-name" placeholder="Exercise name" />
+            <input type="text" class="exercise-reps" placeholder="reps" />
+            <input type="text" class="exercise-weight" placeholder="weight + kgs/lbs" />
+            <input type="text" class="exercise-notes" placeholder="Add notes..." />
+            <button class="remove-exercise">×</button>
+          </div>
+        </div>
+        <button class="add-exercise">Add Exercise</button>
+      </section>
+    </div>
+
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <span class="toast-message">Program saved</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="program.js"></script>
+</body>
+</html> 

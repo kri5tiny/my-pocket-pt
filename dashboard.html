@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | My Pocket PT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="home-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <div class="header-text">
+          <h1 class="title">Workout Dashboard</h1>
+          <p class="subtitle">Track your progress</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="calendar-section">
+      <h2>Weekly Calendar</h2>
+      <div class="calendar">
+        <div class="calendar-days" id="calendarDays">
+          <!-- Calendar days will be populated here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="push">Push Day</button>
+      <button class="tab-button" data-tab="pull">Pull Day</button>
+      <button class="tab-button" data-tab="legs">Leg Day</button>
+    </div>
+
+    <div class="tab-content">
+      <div id="push" class="tab-pane active">
+        <div class="tab-header">
+          <h2>Push Day Exercises</h2>
+          <div class="tab-actions">
+            <button class="nav-button" onclick="window.location.href='log.html'">Log Workout</button>
+            <button class="nav-button" onclick="window.location.href='program.html'">Edit Program</button>
+          </div>
+        </div>
+        <div class="exercise-list">
+          <!-- Exercises will be loaded here -->
+        </div>
+      </div>
+      <div id="pull" class="tab-pane">
+        <div class="tab-header">
+          <h2>Pull Day Exercises</h2>
+          <div class="tab-actions">
+            <button class="nav-button" onclick="window.location.href='program.html'">Edit Program</button>
+            <button class="nav-button" onclick="window.location.href='log.html'">Log Workout</button>
+          </div>
+        </div>
+        <div class="exercise-list">
+          <!-- Exercises will be loaded here -->
+        </div>
+      </div>
+      <div id="legs" class="tab-pane">
+        <div class="tab-header">
+          <h2>Leg Day Exercises</h2>
+          <div class="tab-actions">
+            <button class="nav-button" onclick="window.location.href='program.html'">Edit Program</button>
+            <button class="nav-button" onclick="window.location.href='log.html'">Log Workout</button>
+          </div>
+        </div>
+        <div class="exercise-list">
+          <!-- Exercises will be loaded here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html> 
